@@ -77,7 +77,7 @@ def fit_window_weights(S, Z, C, y, alphas=(10.0, 100.0, 1000.0, 5000.0)):
 
 def fit_moe_gating(S, Z, C, y, seed=0):
     """PC-only Stage 2 EM reference, fixed linear gate and PRS experts."""
-    from moeprs import MoEPRS
+    from stages.stage2.moeprs import MoEPRS
     m = MoEPRS(seed=seed, n_pc=10, l2_gate=0.01).fit(S, C, y)
     return lambda S2, Z2, C2: m.predict(S2, C2)
 

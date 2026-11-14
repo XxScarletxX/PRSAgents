@@ -27,13 +27,13 @@ def main():
         parser.error("budget and max-turns must be positive")
     sys.path.insert(0, str(args.project.resolve()))
     from harness import Dataset, Harness
-    from stages.stage1_moeprs import MoEPRS
+    from stages.stage2.stage1_moeprs import MoEPRS
 
     data_path = Path(args.data)
     if not data_path.is_absolute():
         data_path = args.project / data_path
     d = Dataset(str(data_path), args.replicate)
-    from stage2_baselines import load_experts
+    from stages.stage2.stage2_baselines import load_experts
     d = load_experts(d, args.scores)
     harness = Harness(d, budget=args.budget)
     S, _, C, y, _ = d.part("train")

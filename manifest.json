@@ -19,28 +19,13 @@
   },
   {
    "path": "README.md",
-   "bytes": 11331,
-   "sha256": "85487e96e7f875ca63ec5bc016e61f0b8e462a4a9415255a5de2f20f78d9ebe5"
-  },
-  {
-   "path": "STAGE2_GUIDE.md",
-   "bytes": 4765,
-   "sha256": "281d5a492ece0e8aa48df225268b28d5f99578e048304bea008eb3ff4a388e89"
-  },
-  {
-   "path": "baselines.py",
-   "bytes": 162,
-   "sha256": "0a51fa7c3523146326ad5382772fe49f14fe0e39058236a04f90fa67b6ec13dd"
+   "bytes": 11486,
+   "sha256": "121164099cb38696c34cf108200d58a162e8650b0873a939c256b6081d9dc031"
   },
   {
    "path": "check_package.py",
    "bytes": 3926,
    "sha256": "d2492f5ca8bb5bac039600bb6644a0150e0ca032c28da3f030fd3735ae4b486c"
-  },
-  {
-   "path": "cv_tools.py",
-   "bytes": 5845,
-   "sha256": "027087a789d95f7370edec9e2a7655b453f0865d87bad8a3b491fb3185b20a6f"
   },
   {
    "path": "data/README.md",
@@ -283,44 +268,19 @@
    "sha256": "a014891e82d1a766b4e33c97f1a25d43fc7848278a5bd070db60cad4be880413"
   },
   {
-   "path": "fit_stage1.py",
-   "bytes": 2038,
-   "sha256": "83a369cef157d703adee852269c952518f8f4891643c73fc9773636990956470"
-  },
-  {
-   "path": "fixed_search.py",
-   "bytes": 1269,
-   "sha256": "571961ed9f7d27a271d3029240bd8c52fc42665dc11d5dd1e6ad02c2852402cb"
-  },
-  {
    "path": "harness.py",
    "bytes": 6237,
    "sha256": "3d6448bb5bbf4d06969ba4039303a562d10f4d82652b20c4a9786bced431c5dc"
   },
   {
    "path": "models.py",
-   "bytes": 4233,
-   "sha256": "355ddd9f1dbc3fce2dd4179351291c6cc2f6cf255a6bb6d1308e38130e574a60"
-  },
-  {
-   "path": "moeprs.py",
-   "bytes": 5095,
-   "sha256": "635dda953072b9a346c3e1aee1f498899f751e5f330f62bb32772410dfc5daee"
-  },
-  {
-   "path": "paired_contrasts.py",
-   "bytes": 2555,
-   "sha256": "a43bbe10e7cc2b20552db59ece375963469d63fda87ded271593db678c1299de"
+   "bytes": 4247,
+   "sha256": "c8cb2bb2e8f9624f37560f6f33fa678b51c29678b8c9b2812d40a948460c9b24"
   },
   {
    "path": "prsdata.py",
    "bytes": 5010,
    "sha256": "23dab7bc423e157fc101a36b2ef01754abbc5381cff4d9bfdccefe85f3e9a391"
-  },
-  {
-   "path": "qwen_prs_agent.py",
-   "bytes": 7259,
-   "sha256": "166223585d5285debfacceb95552f4f23def79e083c850b96f83ccd4024b9f7b"
   },
   {
    "path": "requirement.txt",
@@ -343,34 +303,89 @@
    "sha256": "8f549aad3e46ce230032ffd654b49344cfc7296dc2930e2149c369a8039d5935"
   },
   {
-   "path": "stage2_baselines.py",
-   "bytes": 5167,
-   "sha256": "219878b16798d0016f34119d762972bad98dc5dec6e5e17b5c2606aa2fea1b8a"
-  },
-  {
-   "path": "stage2_demo.py",
-   "bytes": 1359,
-   "sha256": "8317c21095034be1518afbbb13adb82fbaaaaffcfaa554baefddef6dff6f385b"
-  },
-  {
-   "path": "stages/STAGE3_OLLAMA.md",
-   "bytes": 11862,
-   "sha256": "5d138a09fe6a7c2af81ae96b5a3f69a09f5bf14b59927776b5afc88c04760e9e"
-  },
-  {
    "path": "stages/__init__.py",
    "bytes": 53,
    "sha256": "a74d819839125d8de9cc1f5418f602a7171ff8d530eeb261124211824f2be36e"
   },
   {
-   "path": "stages/stage1_fit.py",
-   "bytes": 2366,
-   "sha256": "86c03978531d47ff82fbc19ce2201ce96f9f1d94c71c014b61ecc340e7912297"
+   "path": "stages/stage1/__init__.py",
+   "bytes": 53,
+   "sha256": "7d5014d7de7dd17f85c6d5f4e4ffceab712e6dfa2f43db211b291a89af853ab6"
   },
   {
-   "path": "stages/stage1_moeprs.py",
-   "bytes": 3615,
-   "sha256": "a7fc14b5fc581a631874854dc9e36f9ce3c74e079a5547a6b4ba37561a4a6d0a"
+   "path": "stages/stage1/fit_stage1.py",
+   "bytes": 2059,
+   "sha256": "3983895c19f1a03e35772d18eeff6ee80644862a8f8346f82ead64d533a74a02"
+  },
+  {
+   "path": "stages/stage1/stage1_fit.py",
+   "bytes": 2373,
+   "sha256": "614227449a7d8335260cf41a9198ec79134fc865407fc17f27d82989ad4ac2b5"
+  },
+  {
+   "path": "stages/stage2/STAGE2_GUIDE.md",
+   "bytes": 4842,
+   "sha256": "2f727b05a8815206d889145acaf83b528e8be4c801d64eab305b44c2f9770794"
+  },
+  {
+   "path": "stages/stage2/__init__.py",
+   "bytes": 45,
+   "sha256": "674e7f47257166ac1dd2df5f5df9fa78423e30e4724111ee4b9bc308f9c82f37"
+  },
+  {
+   "path": "stages/stage2/baselines.py",
+   "bytes": 176,
+   "sha256": "95da664ca9041929fb76493dc827e6f470fbb9a2f9d4b01d3fba916906f48b92"
+  },
+  {
+   "path": "stages/stage2/moeprs.py",
+   "bytes": 5095,
+   "sha256": "635dda953072b9a346c3e1aee1f498899f751e5f330f62bb32772410dfc5daee"
+  },
+  {
+   "path": "stages/stage2/stage1_moeprs.py",
+   "bytes": 3640,
+   "sha256": "c0dfb0a64aa9c827805e6079660aabeb6e04d01e762b5b6db91ccdcfaa52fc31"
+  },
+  {
+   "path": "stages/stage2/stage2_baselines.py",
+   "bytes": 5182,
+   "sha256": "e3588841b3bb16968398e02c16397d55f2c7e104d7966d17bb324a121d1dcb5a"
+  },
+  {
+   "path": "stages/stage2/stage2_demo.py",
+   "bytes": 1361,
+   "sha256": "49a1b9cad6fbf25e94b40f812cb67b616bb57abe8efeabdf185b510d838a658a"
+  },
+  {
+   "path": "stages/stage3/STAGE3_OLLAMA.md",
+   "bytes": 11918,
+   "sha256": "90407d7be28fa586f36b4b53cf059993bf6f8754d11c39baa98c1a20eca81b31"
+  },
+  {
+   "path": "stages/stage3/__init__.py",
+   "bytes": 46,
+   "sha256": "13e962d31466efe5643db1054d1c0efe52be79d2bba00f27a56870152e576758"
+  },
+  {
+   "path": "stages/stage3/cv_tools.py",
+   "bytes": 5852,
+   "sha256": "e0c92d35cc235d73fc7e100ee11c0721a5ddadc839f002602a914cf90d215a44"
+  },
+  {
+   "path": "stages/stage3/fixed_search.py",
+   "bytes": 1284,
+   "sha256": "5b4d8718a8b58a584dc5c60a6d2d6ab40ec1b96ac30b2c21c572b802e3d387e7"
+  },
+  {
+   "path": "stages/stage3/paired_contrasts.py",
+   "bytes": 2555,
+   "sha256": "a43bbe10e7cc2b20552db59ece375963469d63fda87ded271593db678c1299de"
+  },
+  {
+   "path": "stages/stage3/qwen_prs_agent.py",
+   "bytes": 7280,
+   "sha256": "c67944007937cc00cebb01ef108ef4c6c3ae9d4948504c0dc9d78cebf675015c"
   }
  ]
 }

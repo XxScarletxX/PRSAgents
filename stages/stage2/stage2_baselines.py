@@ -14,7 +14,7 @@ from sklearn.pipeline import make_pipeline
 from sklearn.preprocessing import StandardScaler
 from harness import Dataset
 from models import incremental_r2
-from moeprs import MoEPRS
+from .moeprs import MoEPRS
 
 
 def load_experts(d, scores=None):
@@ -66,7 +66,7 @@ def run(data, out, scores=None, train_size=None, replicate=0):
     pd.DataFrame({'iteration': np.arange(len(moe.loglik_history_)),
                   'training_log_likelihood': moe.loglik_history_}).to_csv(out/'moe_training_loglik.csv', index=False)
     (out/'stage2_config.json').write_text(json.dumps({
-        'implementation': 'provided compact teaching MoEPRS (moeprs.py)',
+        'implementation': 'provided compact teaching MoEPRS (stages/stage2/moeprs.py)',
         'n_pc': 10, 'l2_gate': 0.01, 'n_em': moe.n_em, 'seed': moe.seed,
         'n_iter': moe.n_iter_, 'shared_residual_variance': moe.sigma2,
         'experts': d.panel, 'n_train': len(y),

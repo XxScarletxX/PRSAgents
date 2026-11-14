@@ -10,7 +10,7 @@ import numpy as np
 import pandas as pd
 from sklearn.model_selection import KFold
 from sklearn.preprocessing import StandardScaler
-from stages.stage1_moeprs import MoEPRS
+from stages.stage2.stage1_moeprs import MoEPRS
 from models import incremental_r2
 
 

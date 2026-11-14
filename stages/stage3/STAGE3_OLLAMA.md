@@ -44,12 +44,12 @@ Use `qwen3:8b`, `think=False`, and temperature 0 for the main comparison. Record
 
 ## 2 Reproduce the starter agent
 
-The release includes `qwen_prs_agent.py`. It selects the five supplied VIPRS columns as fixed experts, fits a linear Stage 2 baseline, and exposes two tools: `evaluate_variant` and `select_variant`. It lets Qwen vary the gate PC count and penalty, returns validation diagnostics, and saves the actual conversation and tool results.
+The release includes `stages/stage3/qwen_prs_agent.py`. It selects the five supplied VIPRS columns as fixed experts, fits a linear Stage 2 baseline, and exposes two tools: `evaluate_variant` and `select_variant`. It lets Qwen vary the gate PC count and penalty, returns validation diagnostics, and saves the actual conversation and tool results.
 
 Run this demonstration from the project directory:
 
 ```bash
-python qwen_prs_agent.py --project . --data data/shared_effects --model qwen3:8b --budget 6 --out outputs/qwen_demo
+python -m stages.stage3.qwen_prs_agent --project . --data data/shared_effects --model qwen3:8b --budget 6 --out outputs/qwen_demo
 ```
 
 Replace the example data path with your assigned scenario and replicate. Inspect `outputs/qwen_demo/trace.json` and `predictions.csv`. Find an actual tool call, its hypothesis, the returned result, and the agent's final selection. A final answer without tool calls does not demonstrate an agent loop.
@@ -126,6 +126,6 @@ Credit depends on actual LLM-driven experimentation, correct MoE constraints, fa
 
 ## Tools included in this student package
 
-`cv_tools.py` supplies a common-fold, twelve-candidate evaluator with fold-specific preprocessing, descriptive paired error changes, and a single validation confirmation. `fixed_search.py` uses it for a seeded non-LLM comparison. Wire the same evaluator into your own Ollama agent so both controllers use the same candidate space and folds. Extend the evaluator if you implement another permitted link family, and expose that family to both controllers.
+`stages/stage3/cv_tools.py` supplies a common-fold, twelve-candidate evaluator with fold-specific preprocessing, descriptive paired error changes, and a single validation confirmation. `stages/stage3/fixed_search.py` uses it for a seeded non-LLM comparison. Wire the same evaluator into your own Ollama agent so both controllers use the same candidate space and folds. Extend the evaluator if you implement another permitted link family, and expose that family to both controllers.
 
 The `qwen_prs_agent.py` demonstration intentionally still uses one validation split. Replacing that tool with the CV evaluator is part of Stage 3. The supplied tools are scaffolding: submit your changes, derivations, and interpretation rather than treating a reference run as your implementation.

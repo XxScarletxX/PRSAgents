@@ -1,13 +1,13 @@
 """Stage 1 reference export: five source weights, transfer table, target scores.
 
-    python3 fit_stage1.py data/shared_effects --replicate 0 --out outputs/stage1
+    python3 -m stages.stage1.fit_stage1 data/shared_effects --replicate 0 --out outputs/stage1
 """
 import argparse
 from pathlib import Path
 import numpy as np
 import pandas as pd
 from harness import Dataset
-from stages.stage1_fit import fit_sources, transfer_table, SOURCES
+from stages.stage1.stage1_fit import fit_sources, transfer_table, SOURCES
 
 
 def main(scenario, replicate, out):

@@ -1,10 +1,10 @@
 """Compatibility adapters and optional Stage 3 variants.
 
-The provided Stage 2 model is in moeprs.py. The historical filename is
-retained so existing agent scripts continue to work.
+The provided Stage 2 model is in this package's moeprs.py. The historical
+filename is retained for compatibility with the earlier Stage 1 scaffold.
 """
 import numpy as np
-from moeprs import MoEPRS
+from .moeprs import MoEPRS
 
 
 class MultiPRS:

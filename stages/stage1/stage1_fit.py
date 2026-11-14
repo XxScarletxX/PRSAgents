@@ -5,7 +5,7 @@ Students do this themselves with their Assignment 1 VIPRS, summary-statistic
 LASSO, or the published viprs package. This file exists so the instructor can
 check the data supports the exercise, and as a fallback.
 
-    python3 stages/stage1_fit.py data/shared_effects --replicate 0
+    python3 -m stages.stage1.stage1_fit data/shared_effects --replicate 0
 """
 import os, sys
 import numpy as np, pandas as pd

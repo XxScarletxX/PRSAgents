@@ -4,17 +4,17 @@ You do **not** need to derive EM or implement it from scratch. Use the supplied 
 
 ## Default provided implementation
 
-`moeprs.py` contains the model (about 120 lines, NumPy only). `stage2_demo.py` shows loading, fitting, validation, and test-prediction export. Run from this package:
+`stages/stage2/moeprs.py` contains the model (about 120 lines, NumPy only). `stages/stage2/stage2_demo.py` shows loading, fitting, validation, and test-prediction export. Run from the repository root:
 
 ```bash
-python stage2_demo.py data/shared_effects
-python stage2_baselines.py data/shared_effects --out outputs/stage2_demo
+python -m stages.stage2.stage2_demo data/shared_effects
+python -m stages.stage2.stage2_baselines data/shared_effects --out outputs/stage2_demo
 ```
 
 To use your Stage 1 export, add `--scores outputs/stage1_demo/target_scores.csv` to either command. The following is the complete model API once training/validation arrays have been loaded:
 
 ```python
-from moeprs import MoEPRS
+from stages.stage2.moeprs import MoEPRS
 
 # S: fixed source PRS columns; C: age, sex, PC1, ..., PC10.
 # Preprocessing must be learned on the training data only.

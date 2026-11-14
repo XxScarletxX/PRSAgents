@@ -3,8 +3,8 @@ import argparse
 from itertools import product
 import random
 from harness import Dataset
-from stage2_baselines import load_experts
-from cv_tools import TrainingCVEvaluator
+from stages.stage2.stage2_baselines import load_experts
+from .cv_tools import TrainingCVEvaluator
 
 
 if __name__=='__main__':

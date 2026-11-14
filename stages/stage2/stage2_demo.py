@@ -4,8 +4,8 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 from harness import Dataset
-from stage2_baselines import load_experts
-from moeprs import MoEPRS
+from .stage2_baselines import load_experts
+from .moeprs import MoEPRS
 from models import incremental_r2
 
 
