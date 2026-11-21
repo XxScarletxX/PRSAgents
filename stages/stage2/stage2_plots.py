@@ -72,12 +72,12 @@ def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("input", nargs="?", default="outputs/stage2_demo",
                         help="Directory containing Stage 2 CSV exports")
-    parser.add_argument("--out", default=None,
-                        help="Plot directory; defaults to the input directory")
+    parser.add_argument("--out", default="outputs/stage2_figures",
+                        help="Directory for generated figures")
     args = parser.parse_args()
 
     input_dir = Path(args.input)
-    output_dir = Path(args.out) if args.out else input_dir
+    output_dir = Path(args.out)
     output_dir.mkdir(parents=True, exist_ok=True)
 
     plot_validation_metrics(input_dir, output_dir)
