@@ -17,10 +17,14 @@ def main() -> None:
     parser.add_argument("data", nargs="?", default="data/shared_effects")
     parser.add_argument("--replicate", type=int, default=0)
     parser.add_argument("--out", default="outputs/stage2_training_sizes")
+    parser.add_argument("--figures", default="outputs/stage2_figures",
+                        help="Directory for generated learning-curve figures")
     args = parser.parse_args()
 
     output_dir = Path(args.out)
+    figures_dir = Path(args.figures)
     output_dir.mkdir(parents=True, exist_ok=True)
+    figures_dir.mkdir(parents=True, exist_ok=True)
 
     rows = []
     for train_size in TRAINING_SIZES:
@@ -50,10 +54,11 @@ def main() -> None:
     axes[1].set_ylabel("MSE")
     axes[1].legend(fontsize=8)
 
-    fig.savefig(output_dir / "learning_curves.png", dpi=160)
+    fig.savefig(figures_dir / "learning_curves.png", dpi=160)
     plt.close(fig)
 
     print("Wrote training-size results to:", output_dir.resolve())
+    print("Wrote training-size figure to:", (figures_dir / "learning_curves.png").resolve())
 
 
 if __name__ == "__main__":
